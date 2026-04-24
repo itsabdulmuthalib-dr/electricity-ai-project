@@ -6,8 +6,31 @@ from models.forecast import predict_next_usage
 from models.anomaly import detect_anomaly
 
 st.set_page_config(page_title="Electricity AI Project", layout="wide")
+st.markdown("""
+<style>
+.main {
+    background: linear-gradient(135deg, #050816, #0b1026);
+}
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #111827, #0f172a);
+}
+div[data-testid="metric-container"] {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(0,255,255,0.15);
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: 0 0 15px rgba(0,255,255,0.08);
+}
+h1, h2, h3 {
+    color: #ffffff;
+}
+.stAlert {
+    border-radius: 16px;
+}
+</style>
+""", unsafe_allow_html=True)
 
-st.title("⚡ Electricity Consumption Forecasting and Anomaly Detection")
+st.title("⚡Smart Electricity Consumption Forecasting and Anomaly Detection")
 st.subheader("IoT Simulated Live Data Dashboard")
 st.sidebar.markdown("---")
 st.sidebar.header("📌 Project Info")
